@@ -1,0 +1,273 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+html{
+    box-sizing : border-box;
+    margin : 0px;
+    overflow : hidden;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+
+body {
+    color : rgb(97, 97, 97);
+    box-sizing : border-box;
+    margin : 0px;
+    overflow : auto;
+    height : 750px;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing : inherit;
+    margin : inherit;
+}
+
+.top {
+    background-color : #39648a;
+    height : 300px;
+}
+
+.top #storeName {
+    color : white;
+    font-size : 30px;
+    text-align : center;
+    padding-top : 30px;
+}
+
+h1 {
+    cursor : pointer;
+}
+
+#search-form {
+    display : flex;
+    justify-content : center;
+    padding-top : 80px;
+}
+
+#keyword {
+    width : 600px;
+    height : 50px;
+    border : none;
+    border-radius : 5px;
+    margin-right : 10px;
+    padding : 5px;
+    font-size : 20px;
+}
+
+#btn {
+    width : 150px;
+    height : 50px;
+    background-color : rgb(30, 139, 97);
+    border : none;
+    border-radius : 5px;
+    color : white;
+    cursor : pointer;
+    font-size : 20px;
+}
+
+#btn:hover {
+    background-color : rgb(11, 87, 74);
+}
+
+#listAndCard {
+    position : relative;
+    left : 75%;
+}
+
+#seeList, #seeCard {
+    cursor : pointer;
+}
+
+#container {
+    padding-top : 10px;
+    width : 970px;
+    margin : auto;
+    margin-top : 5px;
+    margin-bottom : 7px;
+    padding-bottom: 200px;
+}
+
+.individualList {
+    list-style : none;
+    border : 1px solid rgb(197, 197, 197);
+    border-radius : 10px;
+    height : 155px;
+    box-shadow: 0px 0px 5px 0 gray;
+}
+
+.individualList:hover {
+    box-shadow: 0 0 15px 0 gray;
+}
+
+.individualList-card {
+    display : inline-block;
+    margin-right : 2px;
+    list-style : none;
+    width : 220px;
+    height : 260px;
+    border : 1px solid rgb(197, 197, 197);
+    box-shadow: 0px 0px 5px 0 gray;
+}
+
+.flexUl {
+    display : flex;
+    flex-wrap : wrap;
+    align-content : flex-start;
+}
+
+.bookImage {
+    float : left;
+    padding-top : 10px;
+    padding-left : 10px;
+    margin-right : 10px;
+}
+
+.bookImage img {
+    width : 75px;
+    height : 118px;
+}
+
+.bookImage-card {
+    text-align : center;
+}
+
+.bookImage-card img {
+    width : 75px;
+    height : 118px;
+}
+
+.bookImage-card:hover {
+    text-align : center;
+    transform : scale(1.1);
+}
+
+#container dl {
+    padding-top : 10px;
+    padding-left : 10px;
+}
+
+.bookDetail .title {
+    font-size : 17px;
+    margin-top : 0px;
+}
+
+.urlComponent-card {
+    display : none;
+}
+
+.description-card {
+    display : none;
+}
+
+.info-card {
+    display : none;
+}
+
+.bar {
+    color : rgb(206, 200, 200);
+}
+
+.seeMore {
+    margin-top : 50px;
+    font-size : 30px;
+    text-align : center;
+    border : 1px solid silver;
+    box-shadow : 0px 0px 5px 0 gray;
+    width : 400px;
+}
+
+.seeMore:hover {
+    box-shadow : 0 0 15px 0 gray;
+}
+
+.material-icons.md-48 { 
+    font-size : 48px; 
+}
+
+.box {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+	height : 190px;
+	width : 900px;
+    position : absolute;
+    top : 100px;
+	background-color : #39648a;
+	transition : all 0.2s ease;
+}
+
+.clock {
+	border-radius : 50px;
+	border : 4px solid white;
+	height : 90px;
+	width : 90px;
+	position : relative;
+	top : 30px;
+}
+
+.clock:after {
+	content : "";
+	position : absolute;
+	background-color : white;
+	top : 3px;
+	left : 39px;
+	height : 38px;
+	width : 4px;
+	border-radius : 10px;
+    transform-origin : 2px 37px;
+    animation : minuteHand 1.8s infinite;
+}
+
+@keyframes minuteHand {
+    from {
+        transform : rotate(0deg);
+    }
+    to {
+        transform : rotate(360deg);
+    }
+}
+
+.clock:before {
+	content : "";
+	position : absolute;
+	background-color : white;
+	top : 6px;
+	left : 39px;
+	height : 36px;
+	width : 4px;
+	border-radius : 10px;
+    transform-origin : 1px 35px;
+    animation : secondHand 11s infinite;
+}
+
+@keyframes secondHand {
+    from {
+        transform  :rotate(0deg);
+    }
+    to {
+        transform : rotate(360deg);
+    }
+}
+
+.clock-sentence {
+    color : white;
+    font-size : 12px;
+}
+
+#topScrollButton {
+    position : fixed;
+    right : 100px;
+    bottom : 50px;
+    border : 2px solid silver;
+    box-shadow: 0px 0px 5px 0 gray;
+    width : 29px;
+    height : 30px;
+    cursor : pointer;
+}
+
+#topScrollButton:hover {
+    box-shadow : 0px 0px 15px 0 gray;
+}

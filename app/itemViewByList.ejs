@@ -1,0 +1,11 @@
+<li class = "individualList">
+    <div class = "bookImage">
+        <a href = <%= urlLink %> target = "_blank"> <img src = <%= image %> onerror="this.onerror=null; this.src='no-image.jpg';"/> </a>
+    </div>
+    <dl class = "bookDetail">
+        <dt class = "title"><%= title %></dt>
+        <dt class = "info"><%= author %> <span class = "bar"> | </span> <%= publisher %> <span class = "bar"> | </span> <%= pubdate %></dt>
+        <dt class = "description"><%= description %></dt>
+        <dt class = "urlComponent"><a href = <%= urlLink %> target = "_blank"><%= urlLink %></a></dt>
+    </dl>
+</li>
